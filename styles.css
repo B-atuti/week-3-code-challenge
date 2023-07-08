@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --bg-color: #101010;
+  --secound-bg-color:#191919;
+  --text-color:#fff;
+  --secound-color:aqua;
+  --third-color:#c6c9d8bf;
+  --main-color:#f9004d;
+  --big-font:1.7rem;
+  --h2-font:1.5rem;
+  --p-font:1.3rem;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--third-color);
+  color:var(--main-color);
+}
+
+header {
+  background-color:var(--secound-bg-color);
+  padding: 20px;
+  text-align: center;
+  color: var(--main-color);
+  font-size: var(--big-font);
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color:var(--bg-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#films {
+  list-style-type: none;
+}
+
+#films li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  list-style-type: disc;
+  padding: 5px;
+  border:2px solid var(--secound-color);
+  font-weight: 500;
+  font-size: var(--p-font);
+  margin-left: 5px;
+}
+
+#films li:hover {
+  color:var(--bg-color);
+  background-color: var(--secound-color);
+  border:2px solid var(--main-color);
+}
+
+#movie-details {
+  text-align: center;
+  
+}
+
+#poster {
+  max-width: 90%;
+  height: 70%;
+  margin-bottom: 10px;
+  border: 2px solid var(--secound-color);
+  
+}
+
+#title {
+  font-size: var(--h2-font);
+  margin-bottom: 10px;
+}
+
+#runtime, #showtime, #available-tickets {
+  margin-bottom: 5px; 
+  color: var(--secound-color);
+  text-align: center;
+}
+
+#buy-ticket {
+  padding: 10px 20px;
+  font-size: var(--p-font);
+  background-color: var(--main-color);
+  color:var(--text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#buy-ticket:hover {
+  background-color: var(--secound-bg-color);
+  color: var(--main-color);
+} 
+
+#buy-ticket:disabled {
+  background-color:var(--secound-color);
+  cursor: not-allowed;
+}
+ul#films li.sold-out {
+  text-decoration: line-through;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
